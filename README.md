@@ -27,6 +27,13 @@
 
 ### It will create all required components for Prometheus & Grafana as it used `prometheus-community` helm repository
 
+### You can visualize installed Grafana pod by port-forwarding as you can configure Ingress too by having host-name
+
+`kubectl port-forward svc/prometheus-stack-grafana 8888:80`
+`username: admin` default
+`password: prom-operator` default
+#### You can expose whatever port you want instead of `8888` port but do not change port (80) which we are binding 🚫
+
 ## Install Loki & Promtail using garafana Helm repository that we installed 📎
 
 `helm install loki grafana/loki -n monitoring`
