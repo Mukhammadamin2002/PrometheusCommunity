@@ -30,6 +30,9 @@
 ### You can visualize installed Grafana pod by port-forwarding as you can configure Ingress too by having host-name
 
 `kubectl port-forward svc/prometheus-stack-grafana 8888:80`
+
+Visit: http://localhost:8888
+
 `username: admin` default
 `password: prom-operator` default
 #### You can expose whatever port you want instead of `8888` port but do not change port (80) which we are binding 🚫
